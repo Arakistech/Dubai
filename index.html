@@ -10,7 +10,7 @@
     </script>
     
     <meta charset="utf-8">
-    <title>GeoMapa Saludable</title>
+    <title>Dubai Map</title>
 	
     <meta name="description" content="Dubai"/>
     <meta name="keywords" content="Dubai"/>
@@ -43,7 +43,11 @@
     <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/mapbox-polyline/1.1.1/polyline.js></script>
 
-   
+    <!-- Import Mapbox GL Directions -->
+    <script src="mapbox-gl-directions.js"></script>
+    <script src="mapbox-gl-accessibility.js"></script>
+    <link rel="stylesheet" href=https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css type="text/css" /> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
        
 </head>
 <body>
@@ -55,7 +59,7 @@
                 <div class="sidebar-content rounded-rect flex-center">     <div id="title">
                     <div id="time"></div>
                     <div id="last-updated"></div>
-			<a id="downloadLink" href="" download="map.png">Descarga .png ↓</a>
+			<a id="downloadLink" href="" download="map.png">Download .png ↓</a>
 			</div>
   				<script>
      					var y = document.getElementById('check');
@@ -67,7 +71,7 @@
                     <iframe id="scaled-frame" src="https://arakistech.github.io/LUX/AQI/index.html" width="90%" height="625" scrolling="no" style="border:none;" style="padding-top: 80px;" style="overflow:hidden;"></iframe> 
 		 
 			
-			<!-- <img src="aire.jpg" alt="Italian Trulli"> -->
+			<!-- <img src=" " alt="Italian Trulli"> -->
                     <div id="legend" class="hidden"></div>
                      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')" >&rarr; 
                         </div>

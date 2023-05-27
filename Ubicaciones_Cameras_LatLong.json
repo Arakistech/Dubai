@@ -1,0 +1,103 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "UbicacionesSensores",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.509910704737921, 43.17460628199463 ]    
+
+			},
+			"properties" : {
+				"fid" : "1",
+				"Organismo" : "A8",
+				"Direccion" : "CAMERA1",
+				"Municipio" : "Ermua",
+				"Provincia" : "Bizkaia",
+				"codigo_dea" : 878,
+				"EsMunicipa" : "NO",
+				"buffer" : 200,
+				"x" : -2.509910704737921,
+				"y" : 43.17460628199463
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.533878923859153, 43.17179731551415 ] 
+
+			},
+			"properties" : {
+				"fid" : "13",
+				"Organismo" : "A8",
+				"Direccion" : "CAMERA2",
+				"Municipio" : "Ermua",
+				"Provincia" : "Bizkaia",
+				"codigo_dea" : 2026,
+				"EsMunicipa" : "NO",
+				"buffer" : 200,
+				"x" : -2.533878923859153,
+				"y" : 43.17179731551415
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.4987194179673855,  43.18107440120108 ]   
+ 
+			},
+			"properties" : {
+				"fid" : "13",
+				"Organismo" : "N634",
+				"Direccion" : "CAMERA3",
+				"Municipio" : "Ermua",
+				"Provincia" : "Bizkaia",
+				"codigo_dea" : 2026,
+				"EsMunicipa" : "NO",
+				"buffer" : 200,
+				"x" : -2.4987194179673855,
+				"y" :  43.18107440120108
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.504044973351427, 43.186141927711304 ]    
+			},
+			"properties" : {
+				"fid" : "13",
+				"Organismo" : "N634",
+				"Direccion" : "CAMERA4",
+				"Municipio" : "Ermua",
+				"Provincia" : "Bizkaia",
+				"codigo_dea" : 2026,
+				"EsMunicipa" : "NO",
+				"buffer" : 200,
+				"x" : -2.504044973351427,
+				"y" : 43.186141927711304
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -2.506928088425419, 43.15902623493715 ]   
+
+			},
+			"properties" : {
+				"fid" : "14",
+				"Organismo" : "BICI MONTAÑA",
+				"Direccion" : "CAMERA5",
+				"codigo_dea" : 0,
+				"EsMunicipa" : "NO",
+				"buffer" : 200,
+				"x" : -2.506928088425419,
+				"y" : 43.15902623493715
+			}
+		}
+	]
+}

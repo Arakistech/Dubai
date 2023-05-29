@@ -382,7 +382,7 @@
     });
         
             
-let videoMarkers, showMarkers=true, showDefibrilators=True;    
+let videoMarkers, showMarkers=true, showDefibrilators=true;    
 map.on('load', () => {		
     map.addSource('places', {
     'type': 'geojson',
@@ -705,7 +705,7 @@ const directions = new MapboxDirections({
         controls: { instructions: true },
         flyTo: true,
         preserveDrawingBuffer: true,	
-        language: 'es'
+        language: 'en'
 });
 
 map.addControl(directions, 'top-left');
@@ -788,7 +788,7 @@ function resetRoute() {
 			 
 		 eventHandler() {
                     map.flyTo({
-            center: [55.2051811, 525.0662161], zoom: 3.5, pitch: 30, bearing: 0,
+            center: [55.2051811, 52.0662161], zoom: 3.5, pitch: 30, bearing: 0,
             essential: true // this animation is considered essential with respect to prefers-reduced-motion
         });
                 		}

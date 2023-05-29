@@ -272,42 +272,20 @@
                  
                  {
                      type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2056963, 25.0662725] },
+        "geometry": { "type": "Point", "coordinates": [-2.5069334182849867, 43.18786475703378] },
         "properties": {
-          'title': 'eTalentMania Tennis Academy - JVC',
+          'title': 'Ascensor San Pelayo',
           'marker-color': '#3c4e5a',
           'marker-symbol': 'monument',
           'marker-size': 'small',
 
           // Store the image url and caption in an array.
           'images': [
-            ['', 'eTalentMania Tennis Academy'],
-            ['', 'FeTalentMania Tennis Academy'],
-            ['', 'eTalentMania Tennis Academy']
-          ]
-          }
-	},
-		 
-			 
-	  {
-                     type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2699778, 25.0580052] },
-        "properties": {
-          'title': 'Elite Sports Academy',
-          'marker-color': '#3c4e5a',
-          'marker-symbol': 'monument',
-          'marker-size': 'small',
-
-          // Store the image url and caption in an array.
-          'images': [
-            ['', 'Elite Sports Academy'],
-            ['', 'Elite Sports Academy'],
-            ['', 'Elite Sports Academy']
+            ['https://i.imgur.com/oppIjI5.jpeg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/xND1MND.jpg', 'Ford\'s Theatre in the 19th century, site of the 1865 assassination of President Lincoln'],
+            ['https://i.imgur.com/EKJmqui.jpg', 'The National Cherry Blossom Festival is celebrated around the city each spring.']
           ]
         }
-			 
-			 
-			 
       } ]
     };
 
@@ -382,7 +360,7 @@
     });
         
             
-let videoMarkers, showMarkers=true, showDefibrilators=true;    
+let videoMarkers, showMarkers=true, showDefibrilators=false;    
 map.on('load', () => {		
     map.addSource('places', {
     'type': 'geojson',
@@ -393,11 +371,11 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'description':
-                    '<strong>Jss international school</strong><p>Jumeirah Village - Dubai - United Arab Emirates</p>'
+                    '<strong>Punto cardioprotegido 1</strong><p>BEXEN CARDIO REANIBEX</p>'
                 },
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [55.2051811, 25.0662161]
+                    'coordinates': [-2.5049797467, 43.1876122798]
                 }
             },
             {
@@ -556,7 +534,7 @@ map.on('load', () => {
             popup.remove();
     });
 
-    // escalator and elevators 
+    // escalator and elevetors 
     map.on('mouseenter', 'ascensores', handleMouseEnter);
     map.on('mouseenter', 'rampas', handleMouseEnter);
 
@@ -705,7 +683,7 @@ const directions = new MapboxDirections({
         controls: { instructions: true },
         flyTo: true,
         preserveDrawingBuffer: true,	
-        language: 'en'
+        language: 'es'
 });
 
 map.addControl(directions, 'top-left');
@@ -788,7 +766,7 @@ function resetRoute() {
 			 
 		 eventHandler() {
                     map.flyTo({
-            center: [55.2051811, 25.0658924], zoom: 12, pitch: 30, bearing: 0,
+            center: [2.72, 52.5], zoom: 3.5, pitch: 30, bearing: 0,
             essential: true // this animation is considered essential with respect to prefers-reduced-motion
         });
                 		}

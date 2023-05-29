@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es_ES">
+<html lang="en_EN">
 <head>
     <script async src="https://www.googletagmanager.com/ns.html?id=GTM-MTHZJTG"></script>
     <script>
@@ -71,7 +71,7 @@
                     
 		 
 			
-			<!-- <img src=" " alt="Italian Trulli"> -->
+			<!-- <img src="aire.jpg" alt="Italian Trulli"> -->
                     <div id="legend" class="hidden"></div>
                      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')" >&rarr; 
                         </div>
@@ -84,23 +84,22 @@
 	    
         <div id="map-styles-bg">
             <div id="map-styles">
-		<div id="iarakistain/cl5guvut6006o14o1nl0ppe5u"><span></span>Buildings 1</div> 
-	        <div id="iarakistain/cl64qr1rf000414oal5n058aj"><span></span>Buindings 2</div>    
+                <div id="iarakistain/cl5guvut6006o14o1nl0ppe5u"><span></span>Buildings 1</div> 
+	            <div id="iarakistain/cl64qr1rf000414oal5n058aj"><span></span>Buindings 2</div>    
                 <div id="iarakistain/cli72tm6q02o401pr1lm04899" class="active"><span></span>Markers</div> 
                 <div id="terrain" ><span></span>3D Terrain</div>
                 <div id="iarakistain/cl65j5le2000z14tipe3hsnuy"><span></span>Streets</div>
                 <div id="iarakistain/cl65izeqo000x14ti16nbcx42"><span></span>Topographic</div>
                 <div id="iarakistain/cl65iqpnc003114n3awqprzvs"><span></span>Light</div>
                 <div id="iarakistain/cl65i9s4g000q15oxdwsvktsv"><span></span>Dark</div>
-
             </div>
         </div>
         
         <div id="rain-bg">
             <div id="rain">
                 <div id="color-select">
-                    <div id="rain-color-button" class="active">Rain colour</div>
-                    <div id="snow-color-button">Snow colour</div>
+                    <div id="rain-color-button" class="active">Color Lluvia</div>
+                    <div id="snow-color-button">Color Nieve</div>
                 </div>
                 <div id="rain-color-picker" class="active">
                     <div id="rain-color-picker-inner" ></div>
@@ -109,7 +108,7 @@
                     <div id="snow-color-picker-inner"></div>
                 </div>
                 <hr>
-                <div>Opacidad capa: <span id="mesh-opacity">0.1</span></div>
+                <div>Opacity: <span id="mesh-opacity">0.1</span></div>
                 <div>
                     <input id="slider" type="range" min="0" max="1" step="0.01" value="0.1">
                 </div>
@@ -119,7 +118,6 @@
             <div id="info">
                 <h3>Extra information</h3>
                 <p>Add information about the map</p>
-                
             </div>
         </div>
         <div id="legenda"></div>
@@ -207,8 +205,8 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFyYWtpc3RhaW4iLCJhIjoiY2t4NHBqNHd1MHRvaTJubnhodmxqdXhjbiJ9.T6OE8lXKHGCObadLCmIoqg';
     const map = new mapboxgl.Map({
         container: 'map',
-       style:'mapbox://styles/iarakistain/cli72tm6q02o401pr1lm04899',
-        center:[25.0649866, 55.2095719],
+       style:'mapbox://styles/iarakistain/cl4x51czl004514oga1amzw1s',
+        center:[55.2095719, 25.0649866],
         pitch:40,
         projection:'mercator',
         zoom:14,
@@ -250,7 +248,7 @@
         }
       },
                  
-                 {
+                        {
                      type: 'Feature',
         "geometry": { "type": "Point", "coordinates": [55.2039566, 25.0655212] },
         "properties": {
@@ -272,18 +270,37 @@
                  
                  {
                      type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [-2.5069334182849867, 43.18786475703378] },
+        "geometry": { "type": "Point", "coordinates": [55.2056963, 25.0662725] },
         "properties": {
-          'title': 'Ascensor San Pelayo',
+          'title': 'eTalentMania Tennis Academy - JVC',
           'marker-color': '#3c4e5a',
           'marker-symbol': 'monument',
           'marker-size': 'small',
 
           // Store the image url and caption in an array.
           'images': [
-            ['https://i.imgur.com/oppIjI5.jpeg', 'Gemelo Digital del ascensor'],
-            ['https://i.imgur.com/xND1MND.jpg', 'Ford\'s Theatre in the 19th century, site of the 1865 assassination of President Lincoln'],
-            ['https://i.imgur.com/EKJmqui.jpg', 'The National Cherry Blossom Festival is celebrated around the city each spring.']
+            ['', 'eTalentMania Tennis Academy'],
+            ['', 'FeTalentMania Tennis Academy'],
+            ['', 'eTalentMania Tennis Academy']
+          ]
+          }
+	},
+		 
+			 
+	  {
+                     type: 'Feature',
+        "geometry": { "type": "Point", "coordinates": [55.2699778, 25.0580052] },
+        "properties": {
+          'title': 'Elite Sports Academy',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'small',
+
+          // Store the image url and caption in an array.
+          'images': [
+            ['', 'Elite Sports Academy'],
+            ['', 'Elite Sports Academy'],
+            ['', 'Elite Sports Academy']
           ]
         }
       } ]
@@ -317,8 +334,8 @@
           slideshowContent +
           '</div>' +
           '<div class="cycle">' +
-          '<a href="#" class="prev">&laquo; Previous</a>' +
-          '<a href="#" class="next">Next &raquo;</a>' +
+          '<a href="#" class="prev">&laquo; Previo</a>' +
+          '<a href="#" class="next">Siguiente &raquo;</a>' +
           '</div>'
         '</div>';
         
@@ -371,11 +388,11 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'description':
-                    '<strong>Punto cardioprotegido 1</strong><p>BEXEN CARDIO REANIBEX</p>'
+                    '<strong>Jss international school</strong><p>Jumeirah Village - Dubai - United Arab Emirates</p>'
                 },
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [-2.5049797467, 43.1876122798]
+                    'coordinates': [55.2051811, 25.0662161]
                 }
             },
             {

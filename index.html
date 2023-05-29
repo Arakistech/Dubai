@@ -302,7 +302,7 @@
           'images': [
             ['', 'Elite Sports Academy'],
             ['', 'Elite Sports Academy'],
-            ['', 'TElite Sports Academy']
+            ['', 'Elite Sports Academy']
           ]
         }
 			 
@@ -382,7 +382,7 @@
     });
         
             
-let videoMarkers, showMarkers=true, showDefibrilators=false;    
+let videoMarkers, showMarkers=true, showDefibrilators=True;    
 map.on('load', () => {		
     map.addSource('places', {
     'type': 'geojson',
@@ -393,11 +393,11 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'description':
-                    '<strong>Punto cardioprotegido 1</strong><p>BEXEN CARDIO REANIBEX</p>'
+                    '<strong>Jss international school</strong><p>Jumeirah Village - Dubai - United Arab Emirates</p>'
                 },
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [-2.5049797467, 43.1876122798]
+                    'coordinates': [55.2051811, 25.0662161]
                 }
             },
             {
@@ -556,7 +556,7 @@ map.on('load', () => {
             popup.remove();
     });
 
-    // escalator and elevetors 
+    // escalator and elevators 
     map.on('mouseenter', 'ascensores', handleMouseEnter);
     map.on('mouseenter', 'rampas', handleMouseEnter);
 
@@ -788,7 +788,7 @@ function resetRoute() {
 			 
 		 eventHandler() {
                     map.flyTo({
-            center: [2.72, 52.5], zoom: 3.5, pitch: 30, bearing: 0,
+            center: [55.2051811, 525.0662161], zoom: 3.5, pitch: 30, bearing: 0,
             essential: true // this animation is considered essential with respect to prefers-reduced-motion
         });
                 		}

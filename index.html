@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en_EN">
+<html lang="es_ES">
 <head>
     <script async src="https://www.googletagmanager.com/ns.html?id=GTM-MTHZJTG"></script>
     <script>
@@ -10,16 +10,16 @@
     </script>
     
     <meta charset="utf-8">
-    <title>Dubai Map</title>
+    <title>GeoMapa Saludable</title>
 	
-    <meta name="description" content="Dubai"/>
-    <meta name="keywords" content="Dubai"/>
-    <meta name="author" content="iarakis@kaixo.com"/>
+    <meta name="description" content="GeoMapa saludable de Ermua - by Metabertsoa"/>
+    <meta name="keywords" content="Izarra, Ermua, threejs"/>
+    <meta name="author" content="www.metabertsoa.eus"/>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
-    <meta property="og:title" content="Dubai Map" />
+    <meta property="og:title" content="GeoMapa Saludable" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:url" content="https://arakistech.github.io/Aporta2021/" />
-    <meta property="og:site_name" content="Dubai Map" />
+    <meta property="og:site_name" content="GeoMapa saludable de Ermua" />
     <meta property="og:image" content="https://nagix.github.io/mapbox-gl-rain-layer/screenshot1.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Tactizity" />
@@ -59,7 +59,7 @@
                 <div class="sidebar-content rounded-rect flex-center">     <div id="title">
                     <div id="time"></div>
                     <div id="last-updated"></div>
-			<a id="downloadLink" href="" download="map.png">Download .png ↓</a>
+			<a id="downloadLink" href="" download="map.png">Descarga .png ↓</a>
 			</div>
   				<script>
      					var y = document.getElementById('check');
@@ -68,7 +68,7 @@
     					}) : '';
 	  			</script>
 		
-                    
+                    <iframe id="scaled-frame" src="https://arakistech.github.io/LUX/AQI/index.html" width="90%" height="625" scrolling="no" style="border:none;" style="padding-top: 80px;" style="overflow:hidden;"></iframe> 
 		 
 			
 			<!-- <img src="aire.jpg" alt="Italian Trulli"> -->
@@ -84,14 +84,15 @@
 	    
         <div id="map-styles-bg">
             <div id="map-styles">
-                <div id="iarakistain/cl5guvut6006o14o1nl0ppe5u"><span></span>Buildings 1</div> 
-	            <div id="iarakistain/cl64qr1rf000414oal5n058aj"><span></span>Buindings 2</div>    
-                <div id="iarakistain/cli72tm6q02o401pr1lm04899" class="active"><span></span>Markers</div> 
-                <div id="terrain" ><span></span>3D Terrain</div>
-                <div id="iarakistain/cl65j5le2000z14tipe3hsnuy"><span></span>Streets</div>
-                <div id="iarakistain/cl65izeqo000x14ti16nbcx42"><span></span>Topographic</div>
-                <div id="iarakistain/cl65iqpnc003114n3awqprzvs"><span></span>Light</div>
-                <div id="iarakistain/cl65i9s4g000q15oxdwsvktsv"><span></span>Dark</div>
+                <div id="iarakistain/cl5guvut6006o14o1nl0ppe5u"><span></span>Alturas edificios</div> 
+	        <div id="iarakistain/cl64qr1rf000414oal5n058aj"><span></span>Edificios con/sin ascensor</div>    
+                <div id="iarakistain/cl4x51czl004514oga1amzw1s" class="active"><span></span>Medios accesibles</div> 
+		<div id="iarakistain/cl5gil0ym006614o1gkrym5ke"><span></span>Sensores Aire</div>
+                <div id="terrain" ><span></span>Terreno 3D</div>
+                <div id="iarakistain/cl65j5le2000z14tipe3hsnuy"><span></span>Calles</div>
+                <div id="iarakistain/cl65izeqo000x14ti16nbcx42"><span></span>Topográfico</div>
+                <div id="iarakistain/cl65iqpnc003114n3awqprzvs"><span></span>Claro</div>
+                <div id="iarakistain/cl65i9s4g000q15oxdwsvktsv"><span></span>Oscuro</div>
             </div>
         </div>
         
@@ -108,7 +109,7 @@
                     <div id="snow-color-picker-inner"></div>
                 </div>
                 <hr>
-                <div>Opacity: <span id="mesh-opacity">0.1</span></div>
+                <div>Opacidad capa: <span id="mesh-opacity">0.1</span></div>
                 <div>
                     <input id="slider" type="range" min="0" max="1" step="0.01" value="0.1">
                 </div>
@@ -116,8 +117,9 @@
         </div>
         <div id="info-bg">
             <div id="info">
-                <h3>Extra information</h3>
-                <p>Add information about the map</p>
+                <h3>Sobre GeoMapa Saludable Layer</h3>
+                <p>Esta visualización ha sido desarrollada por <a href="https://www.linkedin.com/in/iarakis/" target="_blank">Ivan Araquistain</a>. Los datos para la visualización se han obtenido de <a href="https://www.opendata.euskadi.eus/inicio/" target="_blank">TWIN</a>, así como <a href="https://www.rainviewer.com/sources.html" target="_blank">diferentes Fuentes de Datos Abiertos</a>.</p>
+                <p>Más información en  <a href="https://www.imh.eus/es/noticias/estudiantes-del-master-en-fabricacion-digital-crean-un-gemelo-digital-twin-para-mejorar-el-funcionamiento-de-los-ascensores-publicos-de-ermua" target="_blank">este enlace</a>.</p>
             </div>
         </div>
         <div id="legenda"></div>
@@ -206,7 +208,7 @@
     const map = new mapboxgl.Map({
         container: 'map',
        style:'mapbox://styles/iarakistain/cl4x51czl004514oga1amzw1s',
-        center:[55.2095719, 25.0649866],
+        center:[-2.505511, 43.186665],
         pitch:40,
         projection:'mercator',
         zoom:14,
@@ -232,36 +234,36 @@
       type: 'FeatureCollection',
       features: [{
         type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2156490, 25.0656143] },
+        "geometry": { "type": "Point", "coordinates": [-2.5030500, 43.1877400] },
         "properties": {
-          'title': 'Huna Aquatics',
+          'title': 'Ascensor Goienkale',
           'marker-color': '#3c4e5a',
           'marker-symbol': 'monument',
           'marker-size': 'small',
 
           // Store the image url and caption in an array.
           'images': [
-            ['https://i.imgur.com/RyMqsNL.jpg', 'Huna Aquatics'],
-            ['https://i.imgur.com/RyMqsNL.jpg', 'Huna Aquatics'],
-            ['https://i.imgur.com/RyMqsNL.jpg', 'Huna Aquatics']
+            ['https://i.imgur.com/oppIjI5.jpeg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/xND1MND.jpg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/EKJmqui.jpg', 'Gemelo Digital del ascensor']
           ]
         }
       },
                  
-                        {
+                 {
                      type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2039566, 25.0655212] },
+        "geometry": { "type": "Point", "coordinates": [-2.5069334182849867, 43.18786475703378] },
         "properties": {
-          'title': 'Gators Swimming Academy',
+          'title': 'Ascensor San Pelayo',
           'marker-color': '#3c4e5a',
           'marker-symbol': 'monument',
           'marker-size': 'small',
 
           // Store the image url and caption in an array.
           'images': [
-            ['https://i.imgur.com/I0MaXOT.jpg', 'Gators Swimming Academy'],
-            ['https://i.imgur.com/I0MaXOT.jpg', 'Gators Swimming Academy'],
-            ['https://i.imgur.com/I0MaXOT.jpg', 'Gators Swimming Academy']
+            ['https://i.imgur.com/oppIjI5.jpeg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/xND1MND.jpg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/EKJmqui.jpg', 'Gemelo Digital del ascensor']
           ]
         }
       },
@@ -270,37 +272,18 @@
                  
                  {
                      type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2056963, 25.0662725] },
+        "geometry": { "type": "Point", "coordinates": [-2.5069334182849867, 43.18786475703378] },
         "properties": {
-          'title': 'eTalentMania Tennis Academy - JVC',
+          'title': 'Ascensor San Pelayo',
           'marker-color': '#3c4e5a',
           'marker-symbol': 'monument',
           'marker-size': 'small',
 
           // Store the image url and caption in an array.
           'images': [
-            ['', 'eTalentMania Tennis Academy'],
-            ['', 'FeTalentMania Tennis Academy'],
-            ['', 'eTalentMania Tennis Academy']
-          ]
-          }
-	},
-		 
-			 
-	  {
-                     type: 'Feature',
-        "geometry": { "type": "Point", "coordinates": [55.2699778, 25.0580052] },
-        "properties": {
-          'title': 'Elite Sports Academy',
-          'marker-color': '#3c4e5a',
-          'marker-symbol': 'monument',
-          'marker-size': 'small',
-
-          // Store the image url and caption in an array.
-          'images': [
-            ['', 'Elite Sports Academy'],
-            ['', 'Elite Sports Academy'],
-            ['', 'Elite Sports Academy']
+            ['https://i.imgur.com/oppIjI5.jpeg', 'Gemelo Digital del ascensor'],
+            ['https://i.imgur.com/xND1MND.jpg', 'Ford\'s Theatre in the 19th century, site of the 1865 assassination of President Lincoln'],
+            ['https://i.imgur.com/EKJmqui.jpg', 'The National Cherry Blossom Festival is celebrated around the city each spring.']
           ]
         }
       } ]
@@ -388,11 +371,11 @@ map.on('load', () => {
                 'type': 'Feature',
                 'properties': {
                     'description':
-                    '<strong>Jss international school</strong><p>Jumeirah Village - Dubai - United Arab Emirates</p>'
+                    '<strong>Punto cardioprotegido 1</strong><p>BEXEN CARDIO REANIBEX</p>'
                 },
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [55.2051811, 25.0662161]
+                    'coordinates': [-2.5049797467, 43.1876122798]
                 }
             },
             {

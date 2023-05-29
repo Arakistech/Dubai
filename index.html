@@ -933,7 +933,7 @@ map.on( 'load', function () {
   
 // add defibrilators 
 function addDefibrilators() {
-    map.loadImage('https://github.com/Arakistech/Dubai/blob/main/assets/images/images/desfib.png', (error, image) => {
+    map.loadImage('assets/images/desfib.png', (error, image) => {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('defibrilators', image);
